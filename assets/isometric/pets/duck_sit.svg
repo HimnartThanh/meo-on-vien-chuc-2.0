@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Shadow -->
+  <ellipse cx="60" cy="110" rx="32" ry="9" fill="#5C4533" opacity="0.2"/>
+
+  <!-- Tail Feathers resting on floor -->
+  <path d="M 80,90 Q 94,84 90,98 Z" fill="#FFF176" stroke="#5D4037" stroke-width="2"/>
+
+  <!-- Sitting Duck Body -->
+  <ellipse cx="60" cy="86" rx="28" ry="22" fill="#FFF176" stroke="#5D4037" stroke-width="2.5"/>
+
+  <!-- Orange Feet sticking forward -->
+  <ellipse cx="40" cy="104" rx="10" ry="5" fill="#FF9800" stroke="#E65100" stroke-width="1.8"/>
+  <ellipse cx="80" cy="104" rx="10" ry="5" fill="#FF9800" stroke="#E65100" stroke-width="1.8"/>
+
+  <!-- Duck Head slightly tilted forward -->
+  <circle cx="60" cy="48" r="27" fill="#FFF176" stroke="#5D4037" stroke-width="2.5"/>
+
+  <!-- Sprout Clip -->
+  <g id="head-sprout" transform="translate(60, 21)">
+    <path d="M 0,3 Q -7,-5 -1,-11 Q 2,-5 0,3 Z" fill="#66BB6A" stroke="#2E7D32" stroke-width="1.2"/>
+    <path d="M 0,3 Q 7,-3 9,-9 Q 3,-5 0,3 Z" fill="#81C784" stroke="#2E7D32" stroke-width="1.2"/>
+  </g>
+
+  <!-- Focused Eyes Looking at Flashcard -->
+  <ellipse cx="48" cy="45" rx="4.5" ry="5.5" fill="#2C1810"/>
+  <circle cx="47" cy="43.5" r="1.8" fill="#FFFFFF"/>
+  <ellipse cx="72" cy="45" rx="4.5" ry="5.5" fill="#2C1810"/>
+  <circle cx="71" cy="43.5" r="1.8" fill="#FFFFFF"/>
+
+  <!-- Blue Nerd Glasses -->
+  <circle cx="48" cy="45" r="7.5" fill="none" stroke="#1E88E5" stroke-width="1.8"/>
+  <circle cx="72" cy="45" r="7.5" fill="none" stroke="#1E88E5" stroke-width="1.8"/>
+  <line x1="55.5" y1="45" x2="64.5" y2="45" stroke="#1E88E5" stroke-width="1.8"/>
+
+  <!-- Orange Bill -->
+  <path d="M 52,50 Q 60,46 68,50 Q 71,56 60,58 Q 49,56 52,50 Z" fill="#FFA726" stroke="#E65100" stroke-width="1.8"/>
+
+  <!-- Cheeks -->
+  <ellipse cx="38" cy="50" rx="5" ry="3" fill="#FF8A80" opacity="0.5"/>
+  <ellipse cx="82" cy="50" rx="5" ry="3" fill="#FF8A80" opacity="0.5"/>
+
+  <!-- Holding Law Flashcard in Wing Paws -->
+  <g id="flashcard" transform="translate(42, 68)">
+    <rect x="0" y="0" width="36" height="26" rx="4" fill="#E1F5FE" stroke="#0288D1" stroke-width="1.8"/>
+    <text x="18" y="12" font-family="'Nunito', sans-serif" font-size="7" font-weight="900" fill="#0288D1" text-anchor="middle">LUẬT VC</text>
+    <line x1="6" y1="16" x2="30" y2="16" stroke="#03A9F4" stroke-width="1.2"/>
+    <line x1="8" y1="20" x2="28" y2="20" stroke="#03A9F4" stroke-width="1.2"/>
+    <!-- Wing tips holding card -->
+    <ellipse cx="1" cy="13" rx="4" ry="5" fill="#FFEE58" stroke="#5D4037" stroke-width="1.5"/>
+    <ellipse cx="35" cy="13" rx="4" ry="5" fill="#FFEE58" stroke="#5D4037" stroke-width="1.5"/>
+  </g>
+</svg>

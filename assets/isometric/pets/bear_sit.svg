@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Shadow -->
+  <ellipse cx="60" cy="110" rx="36" ry="10" fill="#5C4533" opacity="0.2"/>
+
+  <!-- Round Bear Tail -->
+  <circle cx="84" cy="94" r="7" fill="#8D5B4C" stroke="#4E342E" stroke-width="2"/>
+
+  <!-- Sitting Hind Legs with Large Footpads -->
+  <ellipse cx="38" cy="98" rx="13" ry="9" fill="#9E6B55" stroke="#4E342E" stroke-width="2.5"/>
+  <ellipse cx="38" cy="99" rx="7" ry="5" fill="#EED9C4"/>
+  <circle cx="34" cy="94" r="2" fill="#EED9C4"/>
+  <circle cx="38" cy="93" r="2" fill="#EED9C4"/>
+  <circle cx="42" cy="94" r="2" fill="#EED9C4"/>
+
+  <ellipse cx="82" cy="98" rx="13" ry="9" fill="#9E6B55" stroke="#4E342E" stroke-width="2.5"/>
+  <ellipse cx="82" cy="99" rx="7" ry="5" fill="#EED9C4"/>
+  <circle cx="78" cy="94" r="2" fill="#EED9C4"/>
+  <circle cx="82" cy="93" r="2" fill="#EED9C4"/>
+  <circle cx="86" cy="94" r="2" fill="#EED9C4"/>
+
+  <!-- Body sitting down -->
+  <path d="M 34,65 Q 28,100 60,102 Q 92,100 86,65 Z" fill="#9E6B55" stroke="#4E342E" stroke-width="2.5"/>
+  <ellipse cx="60" cy="84" rx="16" ry="14" fill="#F5E6D3" stroke="#4E342E" stroke-width="1.5"/>
+
+  <!-- Head tilted down focused on reading -->
+  <ellipse cx="60" cy="46" rx="34" ry="28" fill="#9E6B55" stroke="#4E342E" stroke-width="2.5"/>
+
+  <!-- Ears -->
+  <circle cx="32" cy="24" r="12" fill="#9E6B55" stroke="#4E342E" stroke-width="2.5"/>
+  <circle cx="33" cy="25" r="7" fill="#EED9C4"/>
+  <circle cx="88" cy="24" r="12" fill="#9E6B55" stroke="#4E342E" stroke-width="2.5"/>
+  <circle cx="87" cy="25" r="7" fill="#EED9C4"/>
+
+  <!-- Snout -->
+  <ellipse cx="60" cy="51" rx="13" ry="9" fill="#F5E6D3" stroke="#4E342E" stroke-width="1.5"/>
+  <ellipse cx="60" cy="47" rx="5" ry="3.5" fill="#3E2723"/>
+  <path d="M 60,50 L 60,54 M 57,54 Q 60,57 63,54" fill="none" stroke="#4E342E" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Focused Eyes Looking Down -->
+  <ellipse cx="46" cy="42" rx="4.5" ry="5.5" fill="#2C1810"/>
+  <circle cx="45" cy="40.5" r="1.8" fill="#FFFFFF"/>
+  <ellipse cx="74" cy="42" rx="4.5" ry="5.5" fill="#2C1810"/>
+  <circle cx="73" cy="40.5" r="1.8" fill="#FFFFFF"/>
+
+  <!-- Red Nerd Study Glasses -->
+  <circle cx="46" cy="42" r="8" fill="none" stroke="#E53935" stroke-width="2"/>
+  <circle cx="74" cy="42" r="8" fill="none" stroke="#E53935" stroke-width="2"/>
+  <line x1="54" y1="42" x2="66" y2="42" stroke="#E53935" stroke-width="2"/>
+
+  <!-- Cheeks -->
+  <ellipse cx="36" cy="50" rx="5.5" ry="3.5" fill="#FF8A80" opacity="0.5"/>
+  <ellipse cx="84" cy="50" rx="5.5" ry="3.5" fill="#FF8A80" opacity="0.5"/>
+
+  <!-- Cute Study Notebook held in Paws -->
+  <g id="notebook" transform="translate(38, 70)">
+    <!-- Book cover (Pastel Yellow Honeycomb design) -->
+    <path d="M 0,22 L 22,12 L 44,22 L 22,32 Z" fill="#FFE082" stroke="#FFB300" stroke-width="2"/>
+    <!-- Pages -->
+    <path d="M 3,21 L 22,13 L 41,21 L 22,29 Z" fill="#FFFFFF" stroke="#4E342E" stroke-width="1"/>
+    <line x1="22" y1="13" x2="22" y2="29" stroke="#FFB300" stroke-width="1.5"/>
+    <line x1="9" y1="19" x2="18" y2="15" stroke="#FFE082" stroke-width="1.2"/>
+    <line x1="26" y1="15" x2="35" y2="19" stroke="#FFE082" stroke-width="1.2"/>
+    <!-- Paws holding book -->
+    <circle cx="2" cy="20" r="5" fill="#9E6B55" stroke="#4E342E" stroke-width="1.5"/>
+    <circle cx="42" cy="20" r="5" fill="#9E6B55" stroke="#4E342E" stroke-width="1.5"/>
+  </g>
+</svg>

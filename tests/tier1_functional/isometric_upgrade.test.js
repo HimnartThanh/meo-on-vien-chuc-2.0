@@ -32,7 +32,15 @@ describe('Tier 1: Feature 25 — Isometric 2.5D & Multi-Floor Upgrades', () => {
       'assets/isometric/pets/hamster_idle.svg',
       'assets/isometric/pets/hamster_sit.svg',
       'assets/isometric/pets/hamster_sleep.svg',
-      'assets/isometric/pets/bunny_idle.svg'
+      'assets/isometric/pets/bunny_idle.svg',
+      'assets/isometric/pets/bunny_sit.svg',
+      'assets/isometric/pets/bunny_sleep.svg',
+      'assets/isometric/pets/bear_idle.svg',
+      'assets/isometric/pets/bear_sit.svg',
+      'assets/isometric/pets/bear_sleep.svg',
+      'assets/isometric/pets/duck_idle.svg',
+      'assets/isometric/pets/duck_sit.svg',
+      'assets/isometric/pets/duck_sleep.svg'
     ];
 
     assets.forEach(assetPath => {

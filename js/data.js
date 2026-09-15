@@ -737,8 +737,8 @@ const DATA = {
       image: "assets/isometric/pets/bunny_idle.svg",
       poses: {
         idle: "assets/isometric/pets/bunny_idle.svg",
-        sit: "assets/isometric/pets/cat_sit.svg",
-        sleep: "assets/isometric/pets/cat_sleep.svg",
+        sit: "assets/isometric/pets/bunny_sit.svg",
+        sleep: "assets/isometric/pets/bunny_sleep.svg",
         walk: "assets/isometric/pets/bunny_idle.svg"
       },
       personality: "Nhút nhát, thích mặc yếm hồng",
@@ -768,12 +768,12 @@ const DATA = {
       icon: "🐻",
       emoji: "🐻",
       cssClass: "pet-bear",
-      image: "assets/isometric/pets/cat_idle.svg",
+      image: "assets/isometric/pets/bear_idle.svg",
       poses: {
-        idle: "assets/isometric/pets/cat_idle.svg",
-        sit: "assets/isometric/pets/cat_sit.svg",
-        sleep: "assets/isometric/pets/cat_sleep.svg",
-        walk: "assets/isometric/pets/cat_idle.svg"
+        idle: "assets/isometric/pets/bear_idle.svg",
+        sit: "assets/isometric/pets/bear_sit.svg",
+        sleep: "assets/isometric/pets/bear_sleep.svg",
+        walk: "assets/isometric/pets/bear_idle.svg"
       },
       personality: "Hiền lành, hay ngủ nướng",
       description: "Chú gấu nâu tròn trĩnh ấm áp, luôn kiên nhẫn cổ vũ bạn vượt qua câu khó."
@@ -785,12 +785,12 @@ const DATA = {
       icon: "🦆",
       emoji: "🦆",
       cssClass: "pet-duck",
-      image: "assets/isometric/pets/bunny_idle.svg",
+      image: "assets/isometric/pets/duck_idle.svg",
       poses: {
-        idle: "assets/isometric/pets/bunny_idle.svg",
-        sit: "assets/isometric/pets/hamster_sit.svg",
-        sleep: "assets/isometric/pets/hamster_sleep.svg",
-        walk: "assets/isometric/pets/bunny_idle.svg"
+        idle: "assets/isometric/pets/duck_idle.svg",
+        sit: "assets/isometric/pets/duck_sit.svg",
+        sleep: "assets/isometric/pets/duck_sleep.svg",
+        walk: "assets/isometric/pets/duck_idle.svg"
       },
       personality: "Vui vẻ, hay lắc lư",
       description: "Chú vịt vàng lí lắc, biết nhảy múa ăn mừng mỗi khi bạn làm đúng 100% quiz."

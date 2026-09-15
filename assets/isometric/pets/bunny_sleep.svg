@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100">
+  <!-- Shadow -->
+  <ellipse cx="60" cy="78" rx="42" ry="14" fill="#5C4533" opacity="0.2"/>
+
+  <!-- Fluffy tail -->
+  <circle cx="92" cy="64" r="8" fill="#FFFFFF" stroke="#5E432E" stroke-width="2"/>
+
+  <!-- Curled Sleeping Body in Pink Overalls -->
+  <path d="M 35,50 C 20,60 20,80 45,82 C 75,85 95,75 92,55 C 90,40 70,35 50,42 Z" fill="#FFFFFF" stroke="#5E432E" stroke-width="2.5"/>
+  <path d="M 44,55 C 38,62 38,76 48,78 C 65,80 82,76 80,60 Z" fill="#F8BBD0" stroke="#5E432E" stroke-width="1.8"/>
+
+  <!-- Sleeping Head tucked in -->
+  <ellipse cx="40" cy="52" rx="20" ry="16" fill="#FFFFFF" stroke="#5E432E" stroke-width="2.5"/>
+
+  <!-- Ears folded back peacefully -->
+  <path d="M 42,40 C 60,30 82,34 84,40 C 80,44 60,42 42,42 Z" fill="#FFFFFF" stroke="#5E432E" stroke-width="2"/>
+  <path d="M 46,40 C 62,33 78,36 80,40 Z" fill="#F8BBD0"/>
+
+  <!-- Sleeping Eyes (Curved happy lines ^^) -->
+  <path d="M 30,52 Q 35,56 40,52" fill="none" stroke="#5E432E" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="32" cy="57" rx="3.5" ry="2" fill="#FF80AB" opacity="0.5"/>
+  <polygon points="44,53 47,53 45,55" fill="#E91E63"/>
+
+  <!-- Paws tucked under chin -->
+  <circle cx="48" cy="62" r="4.5" fill="#FFFFFF" stroke="#5E432E" stroke-width="1.5"/>
+
+  <!-- Floating Zzz Bubbles -->
+  <g id="zzz-bubbles" fill="#F06292" font-family="'Nunito', sans-serif" font-weight="900">
+    <text x="68" y="38" font-size="12" opacity="0.7">z</text>
+    <text x="78" y="26" font-size="15" opacity="0.85">Z</text>
+    <text x="90" y="14" font-size="18" opacity="0.95">Z</text>
+  </g>
+</svg>
