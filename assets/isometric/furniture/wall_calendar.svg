@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95" width="95" height="95">
+  <!-- Calendar Backing Card -->
+  <rect x="12" y="16" width="71" height="68" rx="8" fill="#FFFDF9" stroke="#5E432E" stroke-width="2.6"/>
+  <!-- Red Header Strip -->
+  <path d="M 12,24 Q 12,16 20,16 L 75,16 Q 83,16 83,24 L 83,34 L 12,34 Z" fill="#E05A7A" stroke="#5E432E" stroke-width="2.6"/>
+
+  <!-- Spiral Rings -->
+  <rect x="26" y="10" width="6" height="12" rx="3" fill="#FFD166" stroke="#5E432E" stroke-width="2"/>
+  <rect x="44.5" y="10" width="6" height="12" rx="3" fill="#FFD166" stroke="#5E432E" stroke-width="2"/>
+  <rect x="63" y="10" width="6" height="12" rx="3" fill="#FFD166" stroke="#5E432E" stroke-width="2"/>
+
+  <!-- Clean Geometric Date Grid (No Text) -->
+  <rect x="22" y="42" width="12" height="10" rx="2.5" fill="#F2E2D2"/>
+  <rect x="41" y="42" width="12" height="10" rx="2.5" fill="#F2E2D2"/>
+  <rect x="60" y="42" width="12" height="10" rx="2.5" fill="#F2E2D2"/>
+
+  <rect x="22" y="57" width="12" height="10" rx="2.5" fill="#F2E2D2"/>
+  <!-- Highlighted Exam Goal Day with Star -->
+  <rect x="41" y="57" width="12" height="10" rx="2.5" fill="#FFD166" stroke="#5E432E" stroke-width="1.6"/>
+  <rect x="60" y="57" width="12" height="10" rx="2.5" fill="#E6F4EF"/>
+</svg>

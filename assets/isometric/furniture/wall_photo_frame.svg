@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 95" width="110" height="95">
+  <!-- Frame 1 (Left Tilted) -->
+  <g transform="rotate(-6 34 46)">
+    <rect x="12" y="18" width="44" height="54" rx="5" fill="#D99B66" stroke="#5E432E" stroke-width="2.4"/>
+    <rect x="17" y="23" width="34" height="44" rx="2.5" fill="#FFF9F4" stroke="#5E432E" stroke-width="1.6"/>
+    <!-- Cute Landscape Inside -->
+    <circle cx="27" cy="34" r="5" fill="#FFD166"/>
+    <polygon points="18,65 30,46 42,65" fill="#88C9B3"/>
+    <polygon points="28,65 40,50 50,65" fill="#529E7E"/>
+  </g>
+
+  <!-- Frame 2 (Right Tilted) -->
+  <g transform="rotate(5 76 50)">
+    <rect x="54" y="22" width="44" height="54" rx="5" fill="#FFB7B2" stroke="#5E432E" stroke-width="2.4"/>
+    <rect x="59" y="27" width="34" height="44" rx="2.5" fill="#FFF9F4" stroke="#5E432E" stroke-width="1.6"/>
+    <!-- Cute Heart & Flower Inside -->
+    <path d="M 76,56 C 76,56 65,48 65,41 C 65,37 69,35 72,38 L 76,42 L 80,38 C 83,35 87,37 87,41 C 87,48 76,56 76,56 Z" fill="#E05A7A"/>
+  </g>
+</svg>

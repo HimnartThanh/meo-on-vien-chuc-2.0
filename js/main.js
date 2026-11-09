@@ -27,14 +27,14 @@
   };
 
   const PET_GREETINGS = [
-    'Chào bạn! Cùng ôn bài để đỗ viên chức nhé! 💕',
-    'Miu luôn ở cạnh đồng hành cùng bạn học tập nè! 🐾',
-    'Hôm nay bạn đã ôn tập chăm chỉ chưa ta? ⭐',
-    'Nỗ lực mỗi ngày một chút, ước mơ sẽ thành hiện thực! 🌸',
-    'Cố lên nha! Tớ tin chắc bạn sẽ làm được! ✨',
-    'Học xong nhớ nghỉ ngơi và uống nước nha bạn ơi! 🥛',
-    'Mỗi bài ôn tập là một bước gần hơn đến kỳ thi! 🎯',
-    'Bạn vất vả rồi, ôm tớ một cái lấy năng lượng nào! 🥰'
+    'Chào thầy cô! Cùng ôn Luật Nhà giáo 2025 & TT 15/2026 để đỗ Viên chức Tiểu học nhé! 💕',
+    'Miu đã cập nhật 110 câu hỏi 2026 và 02 Giáo án mẫu CV 2345 cho bạn rồi nè! 🐾',
+    'Nhớ cấu trúc 4 hoạt động CV 2345: Khởi động - Khám phá - Luyện tập - Vận dụng nha! ⭐',
+    'Khu vực Quận 7 nay có 4 phường mới: Tân Thuận, Phú Thuận, Tân Mỹ, Tân Hưng đó! 🌸',
+    'Thông tư 27 & TT 89/2026: Đánh giá vì sự tiến bộ của học sinh và Học bạ số! ✨',
+    'Học xong nhớ ghé Cẩm Nang Vòng 2 xem 20 Tình huống sư phạm thực전 nha! 🥛',
+    'Mỗi bài ôn tập là một bước gần hơn đến bục giảng Tiểu học mơ ước! 🎯',
+    'Thầy cô vất vả rồi, chạm vào tớ một cái lấy năng lượng học tiếp nào! 🥰'
   ];
 
   const PET_HAPPY_QUOTES = [

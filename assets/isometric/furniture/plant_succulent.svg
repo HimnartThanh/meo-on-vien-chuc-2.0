@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 95" width="90" height="95">
+  <!-- Ground Shadow -->
+  <ellipse cx="45" cy="84" rx="28" ry="8" fill="#5C4533" opacity="0.22"/>
+
+  <!-- Pastel Pink Isometric Pot -->
+  <path d="M 24,52 L 66,52 L 60,80 Q 45,86 30,80 Z" fill="#FFD1DC" stroke="#5E432E" stroke-width="2.4" stroke-linejoin="round"/>
+  <ellipse cx="45" cy="52" rx="22" ry="7" fill="#E8B4B8" stroke="#5E432E" stroke-width="2.4"/>
+  <!-- Cute Pot Smile -->
+  <circle cx="38" cy="65" r="2" fill="#5E432E"/>
+  <circle cx="52" cy="65" r="2" fill="#5E432E"/>
+  <path d="M 42,68 Q 45,71 48,68" fill="none" stroke="#5E432E" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Succulent Rosette Leaves -->
+  <ellipse cx="32" cy="44" rx="10" ry="6" transform="rotate(-20 32 44)" fill="#76B8A1" stroke="#5E432E" stroke-width="2"/>
+  <ellipse cx="58" cy="44" rx="10" ry="6" transform="rotate(20 58 44)" fill="#76B8A1" stroke="#5E432E" stroke-width="2"/>
+  <ellipse cx="37" cy="36" rx="10" ry="6.5" transform="rotate(-10 37 36)" fill="#88C9B3" stroke="#5E432E" stroke-width="2"/>
+  <ellipse cx="53" cy="36" rx="10" ry="6.5" transform="rotate(10 53 36)" fill="#88C9B3" stroke="#5E432E" stroke-width="2"/>
+  <ellipse cx="45" cy="32" rx="9" ry="7" fill="#A8E6CF" stroke="#5E432E" stroke-width="2"/>
+  <circle cx="45" cy="28" r="4" fill="#FFB7B2" stroke="#5E432E" stroke-width="1.6"/>
+</svg>

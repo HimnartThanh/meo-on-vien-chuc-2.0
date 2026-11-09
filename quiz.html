@@ -25,7 +25,7 @@
       --radius: 20px;
       --radius-sm: 12px;
       --shadow: 0 6px 24px rgba(255, 133, 161, 0.2);
-      --font: 'Nunito', sans-serif;
+      --font: 'Be Vietnam Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
 
     * {
@@ -76,7 +76,7 @@
 
     .nav-title {
       font-size: 1.1rem;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--pink-deep);
       text-align: center;
     }
@@ -89,7 +89,7 @@
       background: var(--white);
       border: 2px solid var(--pink-light);
       border-radius: var(--radius-sm);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.9rem;
     }
 
@@ -118,7 +118,7 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.85rem;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--text-mid);
     }
 
@@ -157,7 +157,7 @@
 
     .q-badge {
       font-size: 0.8rem;
-      font-weight: 800;
+      font-weight: 700;
       padding: 4px 10px;
       border-radius: 12px;
       background: var(--pink-light);
@@ -166,7 +166,7 @@
 
     .question-prompt {
       font-size: 1.2rem;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 1.5;
       color: var(--text-dark);
     }
@@ -215,7 +215,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
+      font-weight: 700;
       flex-shrink: 0;
       transition: all 0.2s ease;
     }
@@ -278,7 +278,7 @@
       align-items: center;
       gap: 6px;
       font-size: 0.95rem;
-      font-weight: 800;
+      font-weight: 700;
       color: #2E7D32;
     }
 
@@ -300,7 +300,7 @@
       border: none;
       padding: 14px 28px;
       border-radius: var(--radius-sm);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 1.05rem;
       cursor: pointer;
       display: inline-flex;
@@ -360,7 +360,7 @@
 
     .comp-title {
       font-size: 1.5rem;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--pink-deep);
     }
 
@@ -370,7 +370,7 @@
       color: #E65100;
       padding: 8px 12px;
       border-radius: var(--radius-sm);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.95rem;
     }
 
@@ -392,7 +392,7 @@
 
     .comp-stat-num {
       font-size: 1.4rem;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--pink-deep);
     }
 
@@ -411,7 +411,7 @@
     .btn-comp {
       padding: 12px;
       border-radius: var(--radius-sm);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
       text-decoration: none;
@@ -439,6 +439,7 @@
       background: var(--pink-pastel);
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="top-nav">
@@ -457,13 +458,23 @@
       <div class="progress-bar-bg">
         <div class="progress-bar-fill" id="progress-fill"></div>
       </div>
+      <!-- 3-Level Difficulty Filter Bar -->
+      <div class="diff-filter-bar" id="diff-filter-bar" aria-label="Lọc câu hỏi theo mức độ nhận thức">
+        <button type="button" class="diff-pill active" data-diff="0">Tất cả mức độ</button>
+        <button type="button" class="diff-pill" data-diff="1">🟢 Mức 1: Nhận biết</button>
+        <button type="button" class="diff-pill" data-diff="2">🟡 Mức 2: Áp dụng</button>
+        <button type="button" class="diff-pill" data-diff="3">🔴 Mức 3: Vận dụng cao</button>
+      </div>
     </div>
 
     <!-- Question Card -->
     <div class="question-card" id="question-card">
-      <div class="question-meta">
+      <div class="question-meta" style="flex-wrap: wrap; gap: 8px;">
         <span class="q-badge" id="q-topic-tag">📜 Chủ đề</span>
-        <span class="q-badge" id="q-score-badge">+2 ⭐ nếu đúng</span>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span class="level-badge level-badge-1" id="q-diff-badge">Mức 1: Nhận biết</span>
+          <span class="q-badge" id="q-score-badge">+2 ⭐ nếu đúng</span>
+        </div>
       </div>
       <div class="question-prompt" id="question-prompt">Đang tải câu hỏi...</div>
 
@@ -537,6 +548,7 @@
       let starsEarnedThisSession = 0;
       let answeredThisQuestion = false;
       let currentTopic = null;
+      let selectedDiffFilter = 0;
 
       function getUrlParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -612,6 +624,13 @@
           questionList = [...topicQuestions];
         }
 
+        if (selectedDiffFilter > 0) {
+          const filtered = questionList.filter(q => (q.difficulty || 1) === selectedDiffFilter);
+          if (filtered.length > 0) {
+            questionList = filtered;
+          }
+        }
+
         currentIndex = 0;
         correctCount = 0;
         starsEarnedThisSession = 0;
@@ -656,6 +675,18 @@
 
         if (promptEl) promptEl.textContent = q.concept;
         if (topicTag && currentTopic) topicTag.textContent = `${currentTopic.icon || '📜'} ${currentTopic.name}`;
+
+        const diffBadge = document.getElementById('q-diff-badge');
+        if (diffBadge) {
+          const d = q.difficulty || 1;
+          const labels = {
+            1: '🟢 Mức 1: Nhận biết',
+            2: '🟡 Mức 2: Hiểu & Áp dụng',
+            3: '🔴 Mức 3: Tình huống Vận dụng'
+          };
+          diffBadge.textContent = labels[d] || labels[1];
+          diffBadge.className = `level-badge level-badge-${d}`;
+        }
 
         if (expCard) expCard.style.display = 'none';
         if (nextBox) nextBox.style.display = 'none';
@@ -800,6 +831,20 @@
       function bindQuizEvents() {
         const nextBtn = document.getElementById('btn-next-q');
         const restartBtn = document.getElementById('btn-comp-restart');
+        const diffBar = document.getElementById('diff-filter-bar');
+
+        if (diffBar) {
+          diffBar.addEventListener('click', (e) => {
+            const pill = e.target.closest('.diff-pill');
+            if (!pill) return;
+            selectedDiffFilter = parseInt(pill.dataset.diff || '0', 10);
+            diffBar.querySelectorAll('.diff-pill').forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            if (typeof GameEngine !== 'undefined') GameEngine.playSound('tap');
+            buildQuestions();
+            renderQuestion();
+          });
+        }
 
         if (nextBtn) {
           nextBtn.addEventListener('click', () => {

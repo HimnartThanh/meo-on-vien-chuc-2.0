@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 135" width="150" height="135">
+  <!-- Ground Shadow -->
+  <ellipse cx="75" cy="120" rx="58" ry="13" fill="#5C4533" opacity="0.22"/>
+
+  <!-- Isometric Desk Front-Left & Front-Right Panels -->
+  <polygon points="22,60 75,35 128,60 128,106 75,123 22,106" fill="#D99B66" stroke="#5E432E" stroke-width="2.6" stroke-linejoin="round"/>
+  <polygon points="75,78 128,60 128,106 75,123" fill="#B87A44" stroke="#5E432E" stroke-width="2.6" stroke-linejoin="round"/>
+
+  <!-- Drawer Details on Right Face -->
+  <polygon points="82,82 121,69 121,83 82,96" fill="#E6AE82" stroke="#5E432E" stroke-width="1.8" stroke-linejoin="round"/>
+  <circle cx="102" cy="82" r="2.2" fill="#5E432E"/>
+  <polygon points="82,99 121,86 121,100 82,113" fill="#E6AE82" stroke="#5E432E" stroke-width="1.8" stroke-linejoin="round"/>
+  <circle cx="102" cy="99" r="2.2" fill="#5E432E"/>
+
+  <!-- Isometric Desk Top Surface -->
+  <polygon points="15,56 75,28 135,56 75,82" fill="#F5CBA7" stroke="#5E432E" stroke-width="2.8" stroke-linejoin="round"/>
+  <!-- Desk Mat -->
+  <polygon points="38,56 75,39 108,54 71,71" fill="#E6F4EF" stroke="#5E432E" stroke-width="1.8" stroke-linejoin="round"/>
+
+  <!-- Stack of Lesson Plan Notebooks -->
+  <polygon points="40,52 60,43 74,50 54,59" fill="#FF9AA2" stroke="#5E432E" stroke-width="1.8" stroke-linejoin="round"/>
+  <polygon points="40,47 60,38 74,45 54,54" fill="#76B8A1" stroke="#5E432E" stroke-width="1.8" stroke-linejoin="round"/>
+  <polygon points="40,42 60,33 74,40 54,49" fill="#FFD166" stroke="#5E432E" stroke-width="1.8" stroke-linejoin="round"/>
+
+  <!-- Sunflower Vase -->
+  <rect x="92" y="36" width="14" height="18" rx="5" fill="#FFF9F4" stroke="#5E432E" stroke-width="2.2"/>
+  <line x1="99" y1="36" x2="99" y2="26" stroke="#2E6F5E" stroke-width="2.5"/>
+  <!-- Sunflower Petals -->
+  <circle cx="99" cy="24" r="10" fill="#FFD166" stroke="#5E432E" stroke-width="2"/>
+  <circle cx="99" cy="24" r="4.5" fill="#5E432E"/>
+</svg>

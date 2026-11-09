@@ -29,16 +29,16 @@
   let minimapThumbEl = null;
   let minimapEl = null;
 
-  // Encouraging Civil Servant Study Quotes for Pet
+  // Encouraging Civil Servant Study Quotes for Pet (2026 Primary School Edition)
   const PET_QUOTES = [
-    "Cố lên nhé! Hôm nay cùng ôn bài thật chăm chỉ nào! ✨",
-    "Em đã học rất giỏi rồi, nhớ uống nước nghỉ ngơi xíu nha! 🥤",
-    "Quyết tâm đỗ thủ khoa kỳ thi viên chức nhé! 🎓🎉",
-    "Mỗi ngày một chút kiến thức là nắm chắc vé đỗ! 📚",
-    "Đừng nản trước câu khó, có tớ luôn ở đây cổ vũ bạn nè! 💕",
-    "Hôm nay bạn học được bao nhiêu sao rồi? Tớ tự hào lắm! 🐱",
-    "Viên chức mẫn cán, phục vụ nhân dân tận tụy nhé! ⚖️",
-    "Tớ tin bạn nhất định sẽ làm được! Moah! 🐾"
+    "Cố lên thầy cô ơi! Cùng nắm vững Luật Nhà giáo 73/2025/QH15 nào! ✨",
+    "Thông tư 15/2026/TT-BGDĐT đã thay thế TT 28/2020 từ 27/03/2026 rồi nha! 📘",
+    "Quyết tâm đỗ thủ khoa kỳ thi Viên chức Tiểu học Quận 7 (Tân Thuận, Phú Thuận, Tân Mỹ, Tân Hưng)! 🎓🎉",
+    "Nhớ 4 bước giáo án CV 2345: Khởi động -> Khám phá -> Luyện tập -> Vận dụng! 📚",
+    "Đánh giá học sinh theo TT 27 & Học bạ số TT 89/2026 vì sự tiến bộ của học sinh! 💕",
+    "Hôm nay bạn kiếm được bao nhiêu sao rồi? Sắm Bảng Phấn và Bàn Cô Giáo thôi! 🐱",
+    "Xây dựng Trường học Hạnh phúc và Không gian văn hóa Hồ Chí Minh nhé! ⚖️",
+    "Tớ tin thầy cô nhất định sẽ tỏa sáng ở Vòng 2 Thực hành tiết dạy! Moah! 🐾"
   ];
 
   let quoteTimeout = null;

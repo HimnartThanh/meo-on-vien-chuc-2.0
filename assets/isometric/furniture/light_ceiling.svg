@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 110" width="120" height="110">
+  <!-- Ceiling Mount & Cord -->
+  <ellipse cx="60" cy="8" rx="14" ry="5" fill="#E6AE82" stroke="#5E432E" stroke-width="2.2"/>
+  <line x1="60" y1="13" x2="60" y2="38" stroke="#5E432E" stroke-width="2.5"/>
+
+  <!-- Warm Ambient Halo -->
+  <ellipse cx="60" cy="68" rx="46" ry="26" fill="#FFF3B0" opacity="0.45"/>
+
+  <!-- Fluffy Cloud Lamp Body -->
+  <path d="M 32,68 Q 18,68 18,55 Q 18,43 31,42 Q 36,28 52,30 Q 62,22 75,30 Q 90,28 93,42 Q 104,44 104,56 Q 104,68 90,68 Z" fill="#FFFDF9" stroke="#5E432E" stroke-width="2.6" stroke-linejoin="round"/>
+
+  <!-- Hanging Mini Stars -->
+  <line x1="40" y1="68" x2="40" y2="84" stroke="#D4956A" stroke-width="1.8"/>
+  <circle cx="40" cy="87" r="4.5" fill="#FFD166" stroke="#5E432E" stroke-width="1.6"/>
+
+  <line x1="60" y1="68" x2="60" y2="90" stroke="#D4956A" stroke-width="1.8"/>
+  <polygon points="60,86 62,91 67,91.5 63,95 64,100 60,97.5 56,100 57,95 53,91.5 58,91" fill="#FFD166" stroke="#5E432E" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <line x1="80" y1="68" x2="80" y2="82" stroke="#D4956A" stroke-width="1.8"/>
+  <circle cx="80" cy="85" r="4.5" fill="#FFB7B2" stroke="#5E432E" stroke-width="1.6"/>
+</svg>

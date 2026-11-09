@@ -218,7 +218,7 @@
     <rect x="740" y="75" width="75" height="85" fill="#FCE4EC" rx="2"/>
     <circle cx="777.5" cy="110" r="19" fill="#FF8DA1"/>
     <circle cx="777.5" cy="110" r="14.5" fill="#FFF0F5"/>
-    <text x="777.5" y="114" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FF5E7E" text-anchor="middle">★ 100 ★</text>
+    <polygon points="777.5,100 780,106.5 787,107 781.5,111.5 783,118.5 777.5,114.8 772,118.5 773.5,111.5 768,107 775,106.5" fill="#FF5E7E"/>
     <path d="M 768,126 L 766,140 L 777.5,133 L 789,140 L 787,126 Z" fill="#FF5E7E"/>
     <line x1="777.5" y1="65" x2="777.5" y2="48" stroke="#875E3B" stroke-width="1.8"/>
     <circle cx="777.5" cy="48" r="2.5" fill="#875E3B"/>

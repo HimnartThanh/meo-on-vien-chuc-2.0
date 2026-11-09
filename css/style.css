@@ -3,7 +3,7 @@
    Base Styles, Components, Animations & Responsive Tokens
    ═════════════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito:wght@500;600;700;800&display=swap');
 
 /* ─────────────────────────────────────────────────────────────────────────
    1. CSS Custom Properties / Design Tokens
@@ -12,44 +12,44 @@
   /* Primary Pink Palette */
   --pink-light: #FFE4EE;
   --pink-main: #FF85A1;
-  --pink-deep: #E85D8A;
+  --pink-deep: #D94E7A;
   --pink-pastel: #FFB6C1;
-  --pink-tint: #FFF0F5;
-  --pink-hover: #FA7293;
-  --pink-dark: #C93B67;
+  --pink-tint: #FFF5F8;
+  --pink-hover: #F26489;
+  --pink-dark: #B8335E;
 
   /* Accent Pastels */
   --purple-soft: #C9A8E0;
   --purple-light: #EFE6F8;
-  --purple-deep: #9B6BB8;
-  --green-main: #6BCB77;
-  --green-light: #E8F8EA;
-  --green-deep: #4EAA5A;
-  --red-main: #FF6B6B;
+  --purple-deep: #8552A6;
+  --green-main: #2E8B6E;
+  --green-light: #E6F6F0;
+  --green-deep: #1E634D;
+  --red-main: #E55353;
   --red-light: #FFEAEA;
-  --yellow-main: #FFD93D;
-  --yellow-light: #FFF9E6;
-  --blue-main: #4D96FF;
+  --yellow-main: #F4B41A;
+  --yellow-light: #FFF8E5;
+  --blue-main: #3B82F6;
   --blue-light: #EBF4FF;
 
-  /* Neutral & Text Colors */
-  --text-dark: #3D2B3D;
-  --text-mid: #7A5C7A;
-  --text-light: #B89EB8;
+  /* Neutral & Text Colors (High Contrast WCAG AA) */
+  --text-dark: #2D1E2F;
+  --text-mid: #5E4760;
+  --text-light: #9E82A0;
   --white: #FFFFFF;
-  --white-translucent: rgba(255, 255, 255, 0.85);
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.5);
+  --white-translucent: rgba(255, 255, 255, 0.92);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.65);
 
   /* Backgrounds */
-  --bg-gradient: linear-gradient(135deg, #FFF0F5 0%, #FFE4EE 45%, #F5E6FA 100%);
+  --bg-gradient: linear-gradient(135deg, #FFF7FA 0%, #FFEAF2 50%, #F7EEFC 100%);
   --bg-card: #FFFFFF;
   --bg-shelf: #E5C3A6;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(255, 133, 161, 0.15);
-  --shadow: 0 4px 20px rgba(255, 133, 161, 0.2);
-  --shadow-lg: 0 8px 30px rgba(255, 133, 161, 0.28);
+  --shadow-sm: 0 2px 8px rgba(217, 78, 122, 0.12);
+  --shadow: 0 4px 20px rgba(217, 78, 122, 0.16);
+  --shadow-lg: 0 8px 30px rgba(217, 78, 122, 0.24);
   --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
 
   /* Geometry */
@@ -58,10 +58,11 @@
   --radius-lg: 28px;
   --radius-pill: 9999px;
 
-  /* Typography & Transitions */
-  --font: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  --transition-smooth: all 0.25s ease;
+  /* Typography & Transitions (100% Uniform Vietnamese Glyph Stack) */
+  --font: 'Be Vietnam Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family: 'Be Vietnam Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: all 0.22s ease;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -83,7 +84,7 @@ html {
 body {
   font-family: var(--font);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--text-dark);
   background: var(--bg-gradient);
   background-attachment: fixed;
@@ -93,6 +94,10 @@ body {
   overflow-x: hidden;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 img, svg {
@@ -106,16 +111,18 @@ a {
 }
 
 button, input, select, textarea {
-  font-family: inherit;
+  font-family: var(--font);
   font-size: inherit;
   border: none;
   outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font);
   color: var(--text-dark);
-  font-weight: 800;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
 }
 
 h1 { font-size: 1.85rem; }
@@ -188,7 +195,7 @@ p {
   background: var(--white);
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-pill);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.95rem;
   box-shadow: var(--shadow-sm);
   border: 1.5px solid var(--pink-light);
@@ -220,7 +227,7 @@ p {
 
 .hud-title {
   font-size: 1.15rem;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--pink-deep);
   display: flex;
   align-items: center;
@@ -238,7 +245,7 @@ p {
   padding: 0.75rem 1.4rem;
   border-radius: var(--radius);
   font-family: var(--font);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   transition: var(--transition);
@@ -423,7 +430,7 @@ p {
 
 .menu-card-title {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-dark);
 }
 
@@ -448,7 +455,7 @@ p {
 }
 
 .form-label {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.95rem;
   color: var(--text-dark);
 }
@@ -569,7 +576,7 @@ p {
 
 .modal-title {
   font-size: 1.35rem;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--pink-deep);
   display: flex;
   align-items: center;
@@ -587,7 +594,7 @@ p {
   justify-content: center;
   cursor: pointer;
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 700;
   transition: var(--transition);
 }
 
@@ -726,7 +733,7 @@ p {
 .flashcard-tag {
   align-self: flex-start;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 700;
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-pill);
   background: var(--pink-light);
@@ -777,7 +784,7 @@ p {
 
 .quiz-question-text {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-dark);
   line-height: 1.45;
 }
@@ -820,7 +827,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 0.95rem;
   flex-shrink: 0;
   transition: var(--transition);
@@ -865,7 +872,7 @@ p {
 }
 
 .quiz-explanation-title {
-  font-weight: 800;
+  font-weight: 700;
   color: #166534;
   display: flex;
   align-items: center;
@@ -990,7 +997,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 0.9rem;
   flex-shrink: 0;
 }
@@ -1145,3 +1152,85 @@ p {
     border-radius: var(--radius-sm);
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   18. 2026 Primary School Civil Servant Exam Upgrade Components
+   ───────────────────────────────────────────────────────────────────────── */
+.diff-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white-translucent);
+  border: 2px solid var(--pink-light);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.diff-pill {
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--pink-tint);
+  color: var(--text-mid);
+  border: 1.5px solid var(--pink-light);
+  transition: var(--transition-smooth);
+}
+
+.diff-pill:hover {
+  border-color: var(--pink-main);
+  color: var(--pink-deep);
+}
+
+.diff-pill.active {
+  background: var(--pink-deep);
+  color: var(--white);
+  border-color: var(--pink-deep);
+  box-shadow: 0 3px 10px rgba(217, 78, 122, 0.25);
+}
+
+.level-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.level-badge-1 {
+  background: #E6F6F0;
+  color: #1E634D;
+  border: 1px solid #99DBC4;
+}
+
+.level-badge-2 {
+  background: #FFF8E5;
+  color: #9A6700;
+  border: 1px solid #F5D47A;
+}
+
+.level-badge-3 {
+  background: #FFE4EE;
+  color: #B8335E;
+  border: 1px solid #F7A8C4;
+}
+
+.handbook-banner {
+  background: linear-gradient(135deg, #FFF0F6 0%, #E6F6F0 100%);
+  border: 2.5px solid var(--pink-pastel);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+

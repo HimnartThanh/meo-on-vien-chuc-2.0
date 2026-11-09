@@ -10,7 +10,7 @@
   
   <!-- Digital LED Display showing "18°" -->
   <rect x="42" y="48" width="16" height="10" rx="2" fill="#2D3748"/>
-  <text x="50" y="55" font-size="6" font-family="monospace" fill="#68D391" text-anchor="middle" font-weight="bold">18°</text>
+  
 
   <!-- Intake Grill Lines -->
   <g stroke="#CBD5E0" stroke-width="1.5">
