@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cẩm Nang & Thực Hành Vòng 2 (2026) — Meow Meow Ôn Viên Chức</title>
+  <title>Cẩm Nang & Thực Hành Vòng 2 (2026) — Meo Ôn Viên Chức 2.0</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -23,8 +24,16 @@
       background: linear-gradient(135deg, #FFF5F8 0%, #FFEBF2 50%, #F8F0FC 100%);
       color: #2D222D;
     }
+    /* Explicit tab visibility rules independent of Tailwind JIT */
+    .tab-content {
+      display: none !important;
+    }
+    .tab-content.block,
+    .tab-content.active-tab {
+      display: block !important;
+    }
     .hb-nav-bar {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 2px solid #FFD1E0;
       position: sticky;
@@ -129,24 +138,24 @@
     </div>
 
     <!-- 6 HANDBOOK TABS -->
-    <div class="max-w-7xl mx-auto px-4 pb-3 overflow-x-auto">
+    <div class="max-w-7xl mx-auto px-4 pb-3 overflow-x-auto" id="hb-tabs-scroll">
       <div class="flex items-center gap-2">
-        <button onclick="switchTab('overview')" id="nav-overview" class="hb-tab-btn active">
+        <button type="button" onclick="switchTab('overview')" id="nav-overview" class="hb-tab-btn active">
           <span>🏛️</span><span>1. Khung Tuyển Dụng & 4 Phường Mới Q7</span>
         </button>
-        <button onclick="switchTab('law')" id="nav-law" class="hb-tab-btn">
+        <button type="button" onclick="switchTab('law')" id="nav-law" class="hb-tab-btn">
           <span>⚖️</span><span>2. Hệ Thống 6 Văn Bản Luật 2026</span>
         </button>
-        <button onclick="switchTab('curriculum')" id="nav-curriculum" class="hb-tab-btn">
+        <button type="button" onclick="switchTab('curriculum')" id="nav-curriculum" class="hb-tab-btn">
           <span>📘</span><span>3. Chương Trình GDPT 2018</span>
         </button>
-        <button onclick="switchTab('lesson-plan')" id="nav-lesson-plan" class="hb-tab-btn">
+        <button type="button" onclick="switchTab('lesson-plan')" id="nav-lesson-plan" class="hb-tab-btn">
           <span>📝</span><span>4. CV 2345 & 02 Giáo Án Mẫu 3 Cột</span>
         </button>
-        <button onclick="switchTab('pedagogy')" id="nav-pedagogy" class="hb-tab-btn">
+        <button type="button" onclick="switchTab('pedagogy')" id="nav-pedagogy" class="hb-tab-btn">
           <span>💬</span><span>5. 20 Tình Huống Vòng 2 & TP.HCM</span>
         </button>
-        <button onclick="switchTab('checklist')" id="nav-checklist" class="hb-tab-btn">
+        <button type="button" onclick="switchTab('checklist')" id="nav-checklist" class="hb-tab-btn">
           <span>✅</span><span>6. Checklist 35 Mục (Thưởng +2 ⭐/mục)</span>
         </button>
       </div>
@@ -2060,6 +2069,24 @@
   <script>
     const CL_STORAGE_KEY = 'meow_handbook_checklist_v2026';
     const CL_REWARDED_KEY = 'meow_handbook_rewarded_v2026';
+    const VALID_TABS = ['overview', 'law', 'curriculum', 'lesson-plan', 'pedagogy', 'checklist'];
+
+    function normalizeTabName(raw) {
+      if (!raw) return null;
+      const clean = String(raw).trim().toLowerCase().replace(/^#/, '').replace(/^tab-/, '');
+      const aliasMap = {
+        'overview': 'overview',
+        'law': 'law',
+        'curriculum': 'curriculum',
+        'gdpt': 'curriculum',
+        'lesson-plan': 'lesson-plan',
+        'lesson': 'lesson-plan',
+        'pedagogy': 'pedagogy',
+        'situations': 'pedagogy',
+        'checklist': 'checklist'
+      };
+      return aliasMap[clean] || null;
+    }
 
     function showHbToast(msg) {
       const el = document.getElementById('hb-toast');
@@ -2079,25 +2106,32 @@
       }
     }
 
-    function switchTab(tabName) {
+    function switchTab(tabName, playAudio = true) {
+      const target = normalizeTabName(tabName) || 'overview';
+
       document.querySelectorAll('.tab-content').forEach(sec => {
         sec.classList.add('hidden');
-        sec.classList.remove('block');
+        sec.classList.remove('block', 'active-tab');
+        sec.style.display = 'none';
       });
       document.querySelectorAll('.hb-tab-btn').forEach(btn => {
         btn.classList.remove('active');
       });
 
-      const targetSec = document.getElementById('tab-' + tabName);
+      const targetSec = document.getElementById('tab-' + target);
       if (targetSec) {
         targetSec.classList.remove('hidden');
-        targetSec.classList.add('block');
+        targetSec.classList.add('block', 'active-tab');
+        targetSec.style.display = 'block';
       }
-      const targetBtn = document.getElementById('nav-' + tabName);
+      const targetBtn = document.getElementById('nav-' + target);
       if (targetBtn) {
         targetBtn.classList.add('active');
+        try {
+          targetBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } catch (e) {}
       }
-      if (typeof GameEngine !== 'undefined' && GameEngine.playSound) {
+      if (playAudio && typeof GameEngine !== 'undefined' && GameEngine.playSound) {
         GameEngine.playSound('tap');
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2146,7 +2180,7 @@
             </span>
           `;
 
-          row.addEventListener('click', (e) => {
+          row.addEventListener('click', () => {
             const nextState = !checkedMap[itemKey];
             checkedMap[itemKey] = nextState;
             localStorage.setItem(CL_STORAGE_KEY, JSON.stringify(checkedMap));
@@ -2180,17 +2214,47 @@
       if (cntEl) cntEl.textContent = checkedItems + ' / ' + totalItems + ' mục hoàn thành';
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    function resolveInitialTab() {
+      let target = null;
+      try {
+        const params = new URLSearchParams(window.location.search);
+        target = normalizeTabName(params.get('tab'));
+      } catch (e) {}
+
+      if (!target && window.location.hash) {
+        target = normalizeTabName(window.location.hash);
+      }
+
+      if (!target) {
+        try {
+          const stored = localStorage.getItem('meow_hb_tab');
+          if (stored) {
+            target = normalizeTabName(stored);
+            localStorage.removeItem('meow_hb_tab');
+          }
+        } catch (e) {}
+      } else {
+        try { localStorage.removeItem('meow_hb_tab'); } catch (e) {}
+      }
+
+      switchTab(target || 'overview', false);
+    }
+
+    function initHandbookPage() {
       if (typeof GameEngine !== 'undefined') {
         GameEngine.init();
       }
       updateHandbookHUD();
       renderChecklist();
+      resolveInitialTab();
+    }
 
-      // Check URL hash or ?tab= param
-      const params = new URLSearchParams(window.location.search);
-      const tab = params.get('tab');
-      if (tab) switchTab(tab);
+    // Run immediately + on DOMContentLoaded + on hashchange
+    initHandbookPage();
+    document.addEventListener('DOMContentLoaded', resolveInitialTab);
+    window.addEventListener('hashchange', () => {
+      const t = normalizeTabName(window.location.hash);
+      if (t) switchTab(t, false);
     });
   </script>
 </body>
